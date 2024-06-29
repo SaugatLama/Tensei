@@ -53,7 +53,7 @@
     align-items: center;
 }
 .Rimuru{
-    background: linear-gradient(-75deg,  goldenrod, #262525 70%);
+    background: linear-gradient(-75deg,  #B7B79C, #262525 70%);
     width: 70%;
     padding-left: 3rem;
 }
@@ -144,7 +144,7 @@ button:nth-child(2):hover{
 body{
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #bde4a7, #472d30 70%);
+    background: linear-gradient(-75deg, #A39B84, #2E426E 70%);
     height: 100vh;
 }
 nav ul{
