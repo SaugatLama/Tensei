@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 .Tensura{
     display: flex;
-}
-.Tensura{  
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     height: 100vh;
     width: 100%;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #262525;
+    z-index: 1000;
 }
 .navlist{
     display: flex;
@@ -19,7 +28,8 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    position: absolute; 
+    position: absolute;
+    padding: 1re;
 }
 .navlist li{
     list-style: none;
@@ -53,7 +63,7 @@
     align-items: center;
 }
 .Rimuru{
-    background: linear-gradient(-75deg,  #B7B79C, #262525 70%);
+    background: linear-gradient(-75deg, #B7B79C, #262525 70%);
     width: 70%;
     padding-left: 3rem;
 }
@@ -63,7 +73,7 @@
 }
 .icons a{
     color: silver;
-    font-size: 1.7rem;  
+    font-size: 1.7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,6 +94,7 @@
 .content{
     margin-left: 4rem;
 }
+
 .content .intro{
     font-size: 1.5rem;
     color: #fff;
@@ -91,7 +102,7 @@
 .content .intro span{
     color: gold;
 }
-.content h1{ 
+.content h1{
     font-size: 4rem;
     color: #5DB9EE;
 }
@@ -106,7 +117,7 @@
     border: .1rem solid #5DB9EE;
     font-size: 1.1rem;
     padding: .8rem 1.5rem;
-    border-radius: .5rem; 
+    border-radius: .5rem;
     cursor: pointer;
     transition: .5s ease;
 }
@@ -142,6 +153,76 @@ button:nth-child(2):hover{
     background-repeat: no-repeat;
     border: 1rem solid #fff;
     box-shadow: 0 0 1rem #fff, inset 0 0 1rem #fff, 0 0 2rem #3877FF, inset 0 0 2rem #3877FF, 0 0 4rem #3877FF, inset 0 0 4rem #3877FF;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 1024px){
+    .content{
+        margin-left: 2rem;
+    }
+    .content h1{
+        font-size: 3rem;
+    }
+    .content .detail{
+        font-size: 1rem;
+    }
+    .navlist{
+        height: 5vh;
+    }
+    .navlist li a{
+        font-size: 0.8rem;
+    }
+    .btn-container button{
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
+
+@media (max-width: 768px){
+    .Tensura{
+        flex-direction: row;
+        width: 100%;
+    }
+    .Rimuru{
+        width: 100%;
+    }
+    .Tempest{
+        width: 100%;
+        align-items: center;
+        height: 30vh; /* Reduce height for smaller screens */
+    }
+    .navlist{
+        flex-direction: row;
+        height: auto;
+        position: absolute;
+    }
+    .navlist li{
+        margin-bottom: 1rem;
+    }
+    .navlist li a{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .content{
+        margin-left: 1rem;
+    }
+    .content h1{
+        font-size: 2.5rem;
+    }
+    .content .detail{
+        font-size: 0.9rem;
+    }
+    .btn-container button{
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+    .design .circle {
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        margin-top: 2rem;
+        width: 15rem;
+    }
 }
 
 body{
