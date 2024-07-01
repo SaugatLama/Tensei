@@ -29,7 +29,7 @@ nav{
     justify-content: center;
     align-items: center;
     position: absolute;
-    padding: 1re;
+    padding: 1rem;
 }
 .navlist li{
     list-style: none;
@@ -94,7 +94,6 @@ nav{
 .content{
     margin-left: 4rem;
 }
-
 .content .intro{
     font-size: 1.5rem;
     color: #fff;
@@ -192,17 +191,20 @@ button:nth-child(2):hover{
         height: 30vh; /* Reduce height for smaller screens */
     }
     .navlist{
-        flex-direction: row;
+        flex-direction: column;
         height: auto;
         position: absolute;
+        align-items: center;
     }
     .navlist li{
-        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
     .navlist li a{
         font-size: 1rem;
         text-align: center;
-    }
+    }    
     .content{
         margin-left: 1rem;
     }
@@ -224,6 +226,7 @@ button:nth-child(2):hover{
         width: 15rem;
     }
 }
+
 
 body{
     align-items: center;
@@ -318,11 +321,7 @@ nav ul li a::after{
 /* Responsive design */
 @media (max-width: 768px){
     .projects {
-        padding: 1rem;
-    }
-    navlist{
-        flex-direction: row;
-        gap: 1rem;
+        padding: 5rem;
     }
     .project-item{
         padding: 0.5rem;
