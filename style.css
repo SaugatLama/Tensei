@@ -459,3 +459,47 @@ nav{
         order: 0; /* Reset order for default stacking */
     }
 }
+
+/* Video Demonstration Page Styles */
+header{
+    background: linear-gradient(-45deg, #3877FF, #262525 70%);
+    padding: 3rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+}
+header h1{
+    font-size: 2.5rem;
+    margin: 0;
+}
+.Hinata{
+    padding: 2rem;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 81vh;
+    background: linear-gradient(75deg, #B7B79C, #262525 70%);
+}
+iframe{
+    width: 80%;
+    height: 80%;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px){
+    .Hinata{
+        display: flex;
+        flex-direction: column;   
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    iframe{
+        width: 90%;
+        height: 60%;
+    }
+}
