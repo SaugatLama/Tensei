@@ -20,9 +20,38 @@ nav{
     top: 0;
     z-index: 1000;
 }
-.Hinata{
+nav ul{
     display: flex;
-    gap: 3rem;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+nav ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+}
+.Hianta{
+    display: flex;
+    gap: 1.5rem;
     height: 10vh;
     width: 100%;
     justify-content: center;
@@ -163,9 +192,6 @@ button:nth-child(2):hover{
     .content .detail{
         font-size: 1rem;
     }
-    .Hinata{
-        height: 3vh;
-    }
     .Hinata li a{
         font-size: 0.8rem;
     }
@@ -188,16 +214,13 @@ button:nth-child(2):hover{
         align-items: center;
         height: 30vh; /* Reduce height for smaller screens */
     }
-    nav{
-        margin-top: 2rem;
-    }    
     .Hinata{
         flex-direction: column;
         height: auto;
         align-items: center;
     }
     .Hinata li{
-        margin-top: 1rem;
+        margin-top: 0;
         margin-right: 0;
     }
     .Hinata li a{
@@ -226,51 +249,27 @@ button:nth-child(2):hover{
     }
 }
 
+/* Projects section styles */
 body{
     align-items: center;
     justify-content: center;
     background: linear-gradient(-75deg, #A39B84, #2E426E 70%);
-    height: 100vh;
 }
-nav ul{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 2rem;
-}
-nav ul li a{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem;
+header{
+    background: linear-gradient(-45deg, #3877FF, #262525 70%);
+    padding: 5rem;
+    text-align: center;
     color: #fff;
-    position: relative;
+    margin-bottom: 0;
 }
-nav ul li a:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
+header h1{
+    font-size: 2.5rem;
+    margin: 0;
 }
-nav ul li a::after{
-    content: "";
-    position: absolute;
-    background: #fff;
-    width: 100%;
-    height: .1rem;
-    left: 0;
-    bottom: -5px;
-    transform: scale(0);
-    transform-origin: bottom right;
-    transition: transform .5s;
-}
-
-/* Projects section styles */
 .projects{
     padding: 8rem 2rem;
     text-align: center;
     width: 100%;
-}
-.projects h1{
-    font-size: 3rem;
-    margin-bottom: 2rem;
 }
 .project-grid{
     padding: 2rem;
@@ -280,7 +279,7 @@ nav ul li a::after{
     gap: 2rem;
 }
 .project-item{
-    background: #333;
+    background: linear-gradient(-75deg, black, grey 70%);
     padding: 1rem;
     border-radius: .5rem;
     text-align: left;
@@ -320,39 +319,17 @@ nav ul li a::after{
 
 /* Responsive design */
 @media (max-width: 768px){
+    .shizue{
+        height: 150vh;
+    }
     .projects{
-        padding: 5rem;
+        padding: 3.25rem;
     }
     .project-item{
         padding: 0.5rem;
     }
 }
 
-/* Navigation Bar */  
-nav{  
-    linear-gradient(-45deg, #3877FF, #262525 70%)
-    padding: 0;  
-    text-align: center;  
-}  
-.Hinata{  
-    list-style: none;  
-    margin: 0;  
-    padding: 0;  
-    display: flex;  
-    justify-content: center;  
-}  
-.Hinata li{ 
-    margin-right: 0;  
-}
-.Hinata a{  
-    color: #fff;  
-    text-decoration: none;  
-    transition: color 0.5s ease;  
-}  
-.Hinata a:hover{  
-    color: #ccc;  
-}  
-  
 /* Contact Container */  
 .contact-container{  
     display: flex;
@@ -458,12 +435,12 @@ nav{
     .contact-info{
         order: 0; /* Reset order for default stacking */
     }
-}
-
+}   
+  
 /* Video Demonstration Page Styles */
 header{
     background: linear-gradient(-45deg, #3877FF, #262525 70%);
-    padding: 3rem;
+    padding: 5rem;
     text-align: center;
     color: #fff;
     margin-bottom: 0;
@@ -473,13 +450,13 @@ header h1{
     margin: 0;
 }
 .Hinata{
-    padding: 2rem;
+    padding: 1rem;
 }
-main{
+.Sakaguchi{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 81vh;
+    height: 78vh;
     background: linear-gradient(75deg, #B7B79C, #262525 70%);
 }
 iframe{
@@ -501,5 +478,75 @@ iframe{
     iframe{
         width: 90%;
         height: 60%;
+    }
+}
+
+/* Site Report Page Styles */
+body{
+    background: linear-gradient(75deg, #B7B79C, #262525 70%);
+    height: 100vh;
+    margin: 0;
+}
+header{
+    background: linear-gradient(-45deg, #3877FF, #262525 70%);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+}
+header h1{
+    font-size: 2.5rem;
+    margin: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    height: 125vh;
+    align-items: center;
+    padding: 2rem; /* Added top padding to avoid overlap */
+    background: linear-gradient(75deg, #B7B79C, #262525 70%);
+}
+section{
+    background: linear-gradient(-75deg, purple, pink 70%);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    margin-bottom: 2rem;
+    display: block;
+}
+section h2{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+section p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.toggle{
+    display: none;
+}
+.toggle-content{
+    display: none;
+}
+.toggle:checked + .toggle-content{
+    display: block;
+}
+.show-more{
+    display: block;
+    text-align: center;
+    color: #3877FF;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px){
+    main{
+        height: 130vh;
+    }
+    section{
+        width: 90%;
     }
 }
