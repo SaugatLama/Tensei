@@ -170,7 +170,6 @@ button:nth-child(2):hover{
     border-radius: 50%;
     top: 30%;
     left: 59.5%;
-    transform: translate(-50% -50%);
 }
 .circle:nth-child(1){
     width: 22rem;
@@ -544,7 +543,7 @@ section p{
 /* Media Query for smaller screens */
 @media (max-width: 768px){
     main{
-        height: 130vh;
+        height: 150vh;
     }
     section{
         width: 90%;
