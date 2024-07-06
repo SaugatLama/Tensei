@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
@@ -139,31 +140,6 @@ nav ul li a::after{
     margin: 1.1rem 0 3rem 0;
     line-height: 1.8rem;
 }
-.btn-container button{
-    border: .1rem solid #5DB9EE;
-    font-size: 1.1rem;
-    padding: .8rem 1.5rem;
-    border-radius: .5rem;
-    cursor: pointer;
-    transition: .5s ease;
-}
-button:nth-child(1){
-    background: #5DB8EE;
-    color: #262525;
-}
-button:nth-child(2){
-    background: transparent;
-    color: #5DB9EE;
-    margin-left: 2rem;
-}
-button:nth-child(1):hover{
-    background: transparent;
-    color: #5DB9EE;
-}
-button:nth-child(2):hover{
-    background: #5DB9EE;
-    color: #262525;
-}
 .design .circle{
     aspect-ratio: 1;
     position: fixed;
@@ -190,14 +166,7 @@ button:nth-child(2):hover{
     }
     .content .detail{
         font-size: 1rem;
-    }
-    .Hinata li a{
-        font-size: 0.8rem;
-    }
-    .btn-container button{
-        font-size: 1rem;
-        padding: 0.7rem 1.2rem;
-    }
+    }    
 }
 
 @media (max-width: 768px){
@@ -214,18 +183,8 @@ button:nth-child(2):hover{
         height: 30vh; /* Reduce height for smaller screens */
     }
     .Hinata{
-        flex-direction: column;
-        height: auto;
-        align-items: center;
+        display: none; /* Hidden by default for smaller screens */  
     }
-    .Hinata li{
-        margin-top: 0;
-        margin-right: 0;
-    }
-    .Hinata li a{
-        font-size: 1rem;
-        text-align: center;
-    }    
     .content{
         margin-left: 1rem;
     }
@@ -235,10 +194,6 @@ button:nth-child(2):hover{
     .content .detail{
         font-size: 0.9rem;
     }
-    .btn-container button{
-        font-size: 0.9rem;
-        padding: 0.6rem 1rem;
-    }
     .design .circle{
         position: fixed;
         top: 80%;
@@ -247,6 +202,61 @@ button:nth-child(2):hover{
         width: 15rem;
     }
 }
+/* Hamburger styles */
+.hamburger-menu{
+    display: none; /* Hidden by default for larger screens */
+}
+.hamburger-menu label{
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+}
+.hamburger-menu label span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+}
+.slime li a{
+    color:  #FFA500;
+}
+/* Toggle animation for hamburger icon */
+#menu-toggle:checked + label span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+#menu-toggle:checked + label span:nth-child(2){
+    opacity: 0;
+}
+#menu-toggle:checked + label span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+/* Show navigation links when hamburger is checked */
+#menu-toggle:checked ~ .slime{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 70px; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Ensure it's above other content */
+    padding: 20px;
+}
+
+@media (max-width: 768px){
+    .hamburger-menu {
+        display: block; /* Show hamburger for smaller screens */
+    }
+    .hamburger-menu input{
+        display: none; /* Hide checkbox */
+    }
+    nav ul.slime{
+        display: none; /* Hide regular navigation links for smaller screens */
+    }
+}
+
 
 /* Projects section styles */
 body{
@@ -467,10 +477,6 @@ iframe{
 
 /* Media Query for smaller screens */
 @media (max-width: 768px){
-    .Hinata{
-        display: flex;
-        flex-direction: column;   
-    }
     header h1{
         font-size: 2rem;
     }
@@ -538,8 +544,7 @@ section p{
     font-weight: bold;
     cursor: pointer;
     margin-top: 1rem;
-}
-.image-gallery {
+}.image-gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
