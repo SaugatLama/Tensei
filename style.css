@@ -141,10 +141,10 @@ nav ul li a::after{
 }
 .design .circle{
     aspect-ratio: 1;
-    position: fixed;
     border-radius: 50%;
+    position: relative;
     top: 30%;
-    left: 59.5%;
+    left: -50%;
 }
 .circle:nth-child(1){
     width: 22rem;
@@ -179,7 +179,7 @@ nav ul li a::after{
     .Tempest{
         width: 100%;
         align-items: center;
-        height: 30vh; /* Reduce height for smaller screens */
+        height: 40vh; /* Reduce height for smaller screens */
     }
     .Hinata{
         display: none; /* Hidden by default for smaller screens */  
@@ -194,10 +194,9 @@ nav ul li a::after{
         font-size: 0.9rem;
     }
     .design .circle{
-        position: fixed;
-        top: 80%;
-        left: 30%;
-        margin-top: 2rem;
+        position: relative;
+        top: -20vh;
+        left: 30vh;
         width: 15rem;
     }
 }
@@ -580,4 +579,5 @@ section p{
         width: 100%; /* Adjust the width to fit one image per row on very small screens */
         height: auto; /* Maintain aspect ratio */
     }
-}
+} 
+ 
