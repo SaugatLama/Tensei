@@ -49,7 +49,7 @@ nav ul li a::after{
     transform-origin: bottom right;
     transition: transform .5s;
 }
-.Hianta{
+.Hinata{
     display: flex;
     gap: 1.5rem;
     height: 10vh;
