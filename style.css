@@ -273,19 +273,19 @@ header h1{
     font-size: 2.5rem;
     margin: 0;
 }
-.projects{
+.Projects{
     padding: 8rem 2rem;
     text-align: center;
     width: 100%;
 }
-.project-grid{
+.wenti{
     padding: 2rem;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
-.project-item{
+.azathoth{
     background: linear-gradient(-75deg, black, grey 70%);
     padding: 1rem;
     border-radius: .5rem;
@@ -295,21 +295,21 @@ header h1{
     flex-direction: column;
     align-items: center;
 }
-.project-item img{
+.azathoth img{
     max-width: 100%;
     border-radius: .5rem;
     margin-bottom: 1rem;
 }
-.project-item h2{
+.azathoth h2{
     font-size: 1.5rem;
     margin-bottom: .5rem;
     text-align: center;
 }
-.project-item p{
+.azathoth p{
     margin-bottom: 1rem;
     text-align: center;
 }
-.project-item .btn{
+.azathoth .btn{
     background: #5DB8EE;
     color: #262525;
     padding: .5rem 1rem;
@@ -318,7 +318,7 @@ header h1{
     display: table-cell;
     transition: .3s ease;
 }
-.project-item .btn:hover{
+.azathoth .btn:hover{
     background: transparent;
     color: #5DB8EE;
     border: .1rem solid #5DB8EE;
@@ -329,10 +329,10 @@ header h1{
     .shizue{
         height: auto;
     }
-    .projects{
+    .Projects{
         padding: 3.25rem;
     }
-    .project-item{
+    .azathoth{
         padding: 0.5rem;
     }
 }
@@ -580,4 +580,3 @@ section p{
         height: auto; /* Maintain aspect ratio */
     }
 } 
- 
